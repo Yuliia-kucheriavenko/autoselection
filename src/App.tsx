@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import {Box, Text} from "@chakra-ui/react";
+import { Box, Text } from '@chakra-ui/react'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-        <Box>
-            <Text fontSize={50}>TEST</Text>
-        </Box>
+      <Box>
+        <Text fontSize={50}>TEST</Text>
+      </Box>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
