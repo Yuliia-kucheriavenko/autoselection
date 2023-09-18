@@ -17,7 +17,7 @@ export const Reviews = () => {
           overflowX="hidden"
         >
           {REVIEWS.map((img,) => (
-            <Image src={img} borderRadius={20} key={img.id}/>
+            <Image src={img} borderRadius={20} key={img}/>
           ))}
         </Grid>
 

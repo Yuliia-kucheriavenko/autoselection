@@ -27,7 +27,7 @@ export const NAV_LINKS = [
 
 export const ATTAINMENT = [
   {
-    number: '2035',
+    number: '2 035',
     title: 'машин ми перевірили'
   },
 

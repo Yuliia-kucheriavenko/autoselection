@@ -13,19 +13,19 @@ import { SERVICES } from '../constants/services.ts'
 export const OurServices = () => {
   return (
     <Box as="section" flexDir="column" bg="#252525" py={10}>
-      <Container maxW="container.xl">
+      <Container maxW="container.lg">
         <Heading textTransform="uppercase" mb={9} color="white" textAlign={{ base: "center", lg: "start", }}>
           Наші послуги
         </Heading>
         <Grid
-          templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)'}}
+          templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(4, 1fr)'}}
           gap={8}
           justifyItems="center"
         >
           {SERVICES.map(({ img, title, body }) => (
             <Card
               key={title}
-              maxW="285px"
+              w="285px"
               align="center"
               h={500}
               pos="relative"

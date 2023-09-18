@@ -1,13 +1,11 @@
-import { Link, Image } from '@chakra-ui/react';
-import logo from '../assets/logo.jpg';
-
+import { Link, Image } from '@chakra-ui/react'
+import logo from '../assets/logo.svg'
 
 const Logo = () => {
   return (
-    // @ts-ignore
     <Link to="/">
-      <Image src={logo} w={{base: 20, xl: 'auto'}} />
+      <Image src={logo} w={{ xl: 'auto' }} />
     </Link>
-  );
-};
-export default Logo;
+  )
+}
+export default Logo

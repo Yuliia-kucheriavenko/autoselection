@@ -8,6 +8,9 @@ const colors = {
   grey: {
     100: '#8996a5',
   },
+  turquoise: {
+    100: '#48B8CE',
+  },
 
   blue: {
     50: '#A7D3FA',
