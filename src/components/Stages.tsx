@@ -5,7 +5,7 @@ import {STAGES} from "../constants/stages.ts";
 export const Stages = () => {
   return (
     <Box as="section" bg="#252525" py={10} >
-      <Container maxW="container.xl">
+      <Container maxW="container.lg">
         <Heading textTransform="uppercase" mb={9} color="white" maxW={843} textAlign={{ base: "center", lg: "start", }}>
           Купити автомобіль тепер не складніше, ніж замовити піцу
         </Heading>

@@ -4,7 +4,7 @@ import {PLUSES} from "../constants/stages.ts";
 export const WhatIGet = () => {
   return (
   <Box as="section"  bg="#252525" pt={10} pb={20} >
-    <Container maxW="container.xl">
+    <Container maxW="container.lg">
       <Heading
         textTransform="uppercase"
         color="white"

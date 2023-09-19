@@ -4,7 +4,7 @@ import {SALONS_PROBLEMS} from "../constants/problems.ts";
 export const ProblemsInSalons = () => {
   return (
     <Box as="section" bg="#252525" py={10}>
-      <Container maxW="container.xl">
+      <Container maxW="container.lg">
         <Heading
           textTransform="uppercase"
           mb={9}

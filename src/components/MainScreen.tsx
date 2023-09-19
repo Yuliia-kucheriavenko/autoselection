@@ -1,4 +1,4 @@
-import { Button, Container, Flex, Heading, Text, Box } from '@chakra-ui/react'
+import { Button, Container, Heading, Text, Box } from '@chakra-ui/react'
 import mainImage from '../assets/mainImage.png'
 
 const MainScreen = () => {

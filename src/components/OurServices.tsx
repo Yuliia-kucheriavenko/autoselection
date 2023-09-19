@@ -12,7 +12,7 @@ import {
 import { SERVICES } from '../constants/services.ts'
 export const OurServices = () => {
   return (
-    <Box as="section" flexDir="column" bg="#252525" py={10}>
+    <Box as="section" bg="#252525" py={10}>
       <Container maxW="container.lg">
         <Heading textTransform="uppercase" mb={9} color="white" textAlign={{ base: "center", lg: "start", }}>
           Наші послуги

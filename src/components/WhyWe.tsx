@@ -4,7 +4,7 @@ import {PREFERENCES} from "../constants/preferences.ts";
 export const WhyWe = () => {
   return (
     <Box as="section" bg="#252525" py={10}>
-      <Container maxW="container.xl">
+      <Container maxW="container.lg">
         <Heading
           textTransform="uppercase"
           mb={9}
