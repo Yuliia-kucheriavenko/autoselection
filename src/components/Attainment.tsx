@@ -17,11 +17,12 @@ export const Attainment = () => {
               align="center"
               mb={4}
             >
-              <Flex>
+              <Flex >
                 <Text
                   color="black.300"
                   fontSize={{ base: 32, md: 64 }}
                   fontWeight={600}
+                  _hover={{fontWeight: "800"}}
                 >
                   {number}
                 </Text>
@@ -30,6 +31,7 @@ export const Attainment = () => {
                   fontSize={{ base: 32, md: 64 }}
                   fontWeight={600}
                   pl={2}
+                  _hover={{fontWeight: "800"}}
                 >
                   +
                 </Text>

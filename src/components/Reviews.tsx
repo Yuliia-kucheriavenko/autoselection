@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import {
   Box,
   Button,
@@ -7,46 +7,29 @@ import {
   Heading,
   Image,
   Grid,
-  Center,
 } from '@chakra-ui/react'
-import buttonLeft from '../assets/Buttons/buttonLeft.svg'
-import buttonRight from '../assets/Buttons/buttonRigth.svg'
-import { REVIEWS } from '../constants/reviews.ts'
-import {
-  Carousel,
-  CarouselItem,
-  CarouselItems,
-  useCarousel,
-} from 'chakra-framer-carousel'
 
-function Toolbar() {
-  const { onNext, onPrevious } = useCarousel()
-  return (
-    <Flex gap={6} justifyContent="center" mt={4}>
-      <Button w="48px" h="48px" bgColor="#F2F2F2" onClick={onNext}>
-        <Image src={buttonLeft} alt="Left Button" maxW="24px" />
-      </Button>
-      <Button w="48px" h="48px" bgColor="#F2F2F2" onClick={onPrevious}>
-        <Image src={buttonRight} alt="Right Button" maxW="24px" />
-      </Button>
-    </Flex>
-  )
+interface Props {
+  REVIEWS: string[];
+  buttonLeft: string;
+  buttonRight: string;
 }
 
-export const Reviews = () => {
+export const Reviews: React.FC<Props> = ({ REVIEWS, buttonLeft, buttonRight }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handleNext = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % REVIEWS.length);
     };
-
+  
     const handlePrev = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === 0 ? REVIEWS.length - 1 : prevIndex - 1
       );
     }
+
       return (
-    <Box as="section" py={10} flexDir="column">
+    <Box as="section" py={10} flexDir="column" id="reviewsSection">
       <Container maxW="container.lg">
         <Heading
           textTransform="uppercase"
@@ -55,24 +38,66 @@ export const Reviews = () => {
         >
           Відгуки
         </Heading>
-        <Box display={{base: "block", md: "none"}}>
+        <Box 
+        >
           <Grid
-                templateColumns={{
-                  base: 'repeat(1, 1fr)',
-                  md: 'repeat(3, 1fr)',
-                  lg: 'repeat(4, 1fr)',
-                }}
+            display={{base: "grid", md: "none"}}
+            templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)'}}
                 gap={8}
                 justifyItems="center"
                 overflowX="hidden"
           >
             {REVIEWS.map((img, index) => (
-              <Image
+                <Image
                 key={img}
                 src={img}
-                borderRadius={20}
-                display={index === currentIndex ? 'block' : 'none'}
-              />
+                borderRadius={25}
+                display={
+                  index >= currentIndex && index < currentIndex + 1
+                    ? 'block'
+                    : 'none'
+                }
+              />              
+            ))}
+          </Grid>
+          <Grid
+            display={{base: "none", md: "grid", lg: "none"}}
+            templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(4, 1fr)'}}
+                gap={8}
+                justifyItems="center"
+                overflowX="hidden"
+          >
+            {REVIEWS.map((img, index) => (
+                <Image
+                key={img}
+                src={img}
+                borderRadius={25}
+                display={
+                  index >= currentIndex && index < currentIndex + 3
+                    ? 'block'
+                    : 'none'
+                }
+              />              
+            ))}
+          </Grid>
+          <Grid
+            display={{base: "none", lg: "grid"}}
+            templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)'}}
+                gap={8}
+                justifyItems="center"
+                overflowX="hidden"
+          >
+            {REVIEWS.map((img, index) => (
+                <Image
+                key={img}
+                src={img}
+                borderRadius={25}
+                display={
+                  index >= currentIndex && index < currentIndex + 4
+                    ? 'block'
+                    : 'none'
+                }
+              />              
             ))}
           </Grid>
           <Flex gap={6} justifyContent="center" mt={4}>
@@ -84,21 +109,6 @@ export const Reviews = () => {
             </Button>
           </Flex>
         </Box>
-
-        <Center display={{base: "none", md: "flex"}} flexDir="column" w="100%" alignItems="center">
-          <Carousel>
-            <CarouselItems>
-              {REVIEWS.map((image, index) => {
-                return (
-                  <CarouselItem index={index} key={image}>
-                    <Image src={image} />
-                  </CarouselItem>
-                )
-              })}
-            </CarouselItems>
-            <Toolbar />
-          </Carousel>
-        </Center>
       </Container>
     </Box>
   )

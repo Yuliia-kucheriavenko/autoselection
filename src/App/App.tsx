@@ -12,6 +12,10 @@ import { Reviews } from '../components/Reviews.tsx'
 import { ProblemsInSalons } from '../components/ProblemsInSalons.tsx'
 import {Footer} from "../components/Footer.tsx";
 
+import buttonLeft from '../assets/Buttons/buttonLeft.svg'
+import buttonRight from '../assets/Buttons/buttonRigth.svg'
+import { REVIEWS } from '../constants/reviews.ts'
+
 function App() {
   return (
     <>
@@ -26,7 +30,7 @@ function App() {
       <Stages />
       <WhatIGet />
       <Advertising />
-      <Reviews />
+      <Reviews REVIEWS={REVIEWS} buttonLeft={buttonLeft} buttonRight={buttonRight} />
       <ProblemsInSalons />
         <Footer/>
     </>

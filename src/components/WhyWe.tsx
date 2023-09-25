@@ -3,7 +3,7 @@ import {PREFERENCES} from "../constants/preferences.ts";
 
 export const WhyWe = () => {
   return (
-    <Box as="section" bg="#252525" py={10}>
+    <Box as="section" bg="#252525" py={10} id="whyweSection">
       <Container maxW="container.lg">
         <Heading
           textTransform="uppercase"
@@ -23,7 +23,7 @@ export const WhyWe = () => {
               bg="#FFFFFF"
               key={title}
               w={310}
-              h={230}
+              h={240}
               borderRadius={20}
               flexDirection="column"
             >

@@ -4,7 +4,7 @@ import {STAGES} from "../constants/stages.ts";
 
 export const Stages = () => {
   return (
-    <Box as="section" bg="#252525" py={10} >
+    <Box as="section" bg="#252525" py={10} id="buyCarSection">
       <Container maxW="container.lg">
         <Heading textTransform="uppercase" mb={9} color="white" maxW={843} textAlign={{ base: "center", lg: "start", }}>
           Купити автомобіль тепер не складніше, ніж замовити піцу
@@ -19,15 +19,13 @@ export const Stages = () => {
               key={title}
               direction="column"
               align="center"
-              justifyContent="space-between"
-              gap={8}
-              h="100%"
+              gap={4}
             >
               <Image
                 src={img}
                 alt="stage"
               />
-              <Image src={progress} alt="progress"/>
+              <Image src={progress} alt="progress" />
               <Text
                 fontSize={16}
                 fontWeight={500}

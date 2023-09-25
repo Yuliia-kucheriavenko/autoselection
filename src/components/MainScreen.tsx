@@ -1,7 +1,16 @@
-import { Button, Container, Heading, Text, Box } from '@chakra-ui/react'
+import React from 'react'
+import { Button, Container, Heading, Text, Box, Modal, 
+         ModalOverlay, ModalContent, ModalHeader, 
+         ModalCloseButton, ModalFooter, useDisclosure  
+       } from '@chakra-ui/react'
 import mainImage from '../assets/mainImage.png'
+import { ModalsBody } from '../components/ModalBody'
 
 const MainScreen = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const initialRef = React.useRef(null)
+  const finalRef = React.useRef(null)
+
   return (
     <Box
       as="section"
@@ -53,9 +62,29 @@ const MainScreen = () => {
           py={6}
           zIndex={0}
           pos="relative"
+          onClick={onOpen}
+          _hover={{ bgColor: "#48B8CE", fontWeight: "600", color: "white" }}
         >
           Замовити підбір
         </Button>
+        <Modal
+        initialFocusRef={initialRef}
+        finalFocusRef={finalRef}
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <ModalOverlay />
+        <ModalContent zIndex={9999} bg="white">
+          <ModalHeader>Замовити підбір</ModalHeader>
+          <ModalCloseButton />
+          <ModalsBody initialRef={initialRef} />
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} >
+              Замовити
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
       </Container>
     </Box>
   )

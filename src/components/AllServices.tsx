@@ -33,7 +33,6 @@ export const AllServices = () => {
           {ALL_SERVICES.map(({ icon, title }) => (
             <Flex
               flexDirection="column"
-              // justify="space-berween"
               key={title}
               align="center"
               gap={4}
@@ -44,6 +43,7 @@ export const AllServices = () => {
                 textAlign="center"
                 fontSize={16}
                 fontWeight={600}
+                maxW={350}
               >
                 {title}
               </Text>

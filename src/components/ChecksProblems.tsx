@@ -28,21 +28,21 @@ const categoryes = [
   },
   {
     title: 'двигун/кпп',
-    right: -15,
+    right: 15,
     top: 73,
     baseImg: first,
     hoverImg: firstHover,
   },
   {
     title: 'гальмівна система',
-    right: -134,
-    top: 215,
+    right: -85,
+    top: 165,
     baseImg: fourth,
     hoverImg: fourthHover,
   },
   {
     title: 'підвіска та ходова частина',
-    right: -115,
+    right: -20,
     top: 280,
     baseImg: fifth,
     hoverImg: fifthHover,
@@ -58,8 +58,8 @@ export const ChecksProblems = () => {
   )
 
   return (
-    <Box py={20} as="section">
-      <Container maxW="container.xl">
+    <Box py={20} as="section" id="checksProblemsSection" >
+      <Container maxW="container.lg">
         <Heading
           textTransform="uppercase"
           mb={9}
@@ -68,13 +68,25 @@ export const ChecksProblems = () => {
           Що ми перевіряємо і з якими <br /> проблемами стикаємось?
         </Heading>
 
-        <Flex mt={200}
-              justifyContent="space-between"
+        <Flex mt={{base: '1px', lg: '200px'}}
+              justifyContent={{base: "center", lg: "space-between"}}
               align={{base: "center", lg: "start"}}
-              direction={{base: "column", lg: "row"}}
+              direction={{base: 'column', lg: "row"}}
         >
-          <Box pos="relative" top={-50} textTransform="uppercase">
-            <Image src={check} mb={200} display={{base: "none", md: "block"}}
+          <Box 
+            display="flex"
+            flexDirection="row"
+            // gap={10}
+
+            flexWrap="wrap"
+            alignContent="center"
+            justifyContent="center"
+            pos="relative" 
+            top={{base: '0px', lg: '-50px'}}
+            mb={6}
+            textTransform="uppercase"
+            >
+            <Image src={check}  display={{base: "none", lg: "block"}}
             />
             {categoryes.map((category) => (
               <>
@@ -94,6 +106,7 @@ export const ChecksProblems = () => {
                 transition="all .6s"
               >
                 <Box
+                  display={{base: "none", lg: "block"}}
                 >
                   <Image
                     src={category.baseImg}
@@ -112,7 +125,8 @@ export const ChecksProblems = () => {
                   />
                 </Box>
                 <Text
-                  maxW={180}
+                  maxW={{base: 'auto', lg: '180px'}}
+                  mr={10}
                   fontWeight={600}
                   pt={0.5}
                   color={
@@ -137,7 +151,8 @@ export const ChecksProblems = () => {
               transition="all .6s"
           >
             <Text
-              maxW={180}
+              maxW={{base: 'auto', lg: '180px'}}
+              mr={{base: '10px', lg: '0px'}}
               fontWeight={600}
               pt={0.5}
               color={
@@ -149,25 +164,23 @@ export const ChecksProblems = () => {
             >
               {category.title}
             </Text>
-        </Flex>
+          </Flex>
               </>
             ))}
           </Box>
-
-          <Box
-          >
             <Flex
+              mb={{base: '40px', lg: '0px'}}
               pos="relative"
-              // top={-32}
+              top={{base: 0, lg: -32}}
               px={4}
               pb={5}
               flexDirection="column"
-              maxW={390}
+              maxW={310}
               boxShadow="0px 0px 40px 0px rgba(0, 0, 0, 0.4)"
             >
-              <Image w={360} h={204}
-                     src={description.img}
-                     display={{base: 'none', lg: 'block'}}
+              <Image 
+                w={360} h={204}
+                src={description.img}
               />
               <Text
                 fontSize={24}
@@ -181,11 +194,11 @@ export const ChecksProblems = () => {
                 {description.description}
               </Text>
             </Flex>
-          </Box>
+          
 
         </Flex>
         <Box>
-          <Container maxW="container.lg">
+          <Container maxW="container.lg" mt={{base: "0px", lg: "-50px"}}>
           <Heading
             textTransform="uppercase"
             fontSize={24}

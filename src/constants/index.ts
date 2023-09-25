@@ -1,27 +1,27 @@
 export const NAV_LINKS = [
   {
-    link: '/ourservices',
     title: 'Наші послуги',
+    id: 'ourServicesSection',
   },
 
   {
-    link: '/whatchecking',
-    title: 'Що перевіряємо?'
+    title: 'Що перевіряємо?',
+    id: 'checksProblemsSection',
   },
 
   {
-    link: '/whywe',
     title: 'Чому ми?',
+    id: 'whyweSection',
   },
 
   {
-    link: '/process',
     title: 'Процес',
+    id: 'buyCarSection'
   },
 
   {
-    link: 'reviews',
     title: 'Відгуки',
+    id: 'reviewsSection'
   }
 ];
 
