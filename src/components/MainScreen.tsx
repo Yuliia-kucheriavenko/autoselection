@@ -1,15 +1,26 @@
-import React from 'react'
-import { Button, Container, Heading, Text, Box, Modal, 
-         ModalOverlay, ModalContent, ModalHeader, 
-         ModalCloseButton, ModalFooter, useDisclosure  
-       } from '@chakra-ui/react'
-import mainImage from '../assets/mainImage.png'
-import { ModalsBody } from '../components/ModalBody'
+import React from "react";
+import {
+  Button,
+  Container,
+  Heading,
+  Text,
+  Box,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalFooter,
+  useDisclosure,
+} from "@chakra-ui/react";
+import mainImage from "../assets/mainImage.png";
+import { ModalsBody } from "../components/ModalBody";
+import CallRequestModal from "./CallRequestModal";
 
 const MainScreen = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const initialRef = React.useRef(null)
-  const finalRef = React.useRef(null)
+  const initialRef = React.useRef(null);
+  const finalRef = React.useRef(null);
 
   return (
     <Box
@@ -27,7 +38,7 @@ const MainScreen = () => {
           textTransform="uppercase"
           color="white"
         >
-          Допомога в підборі <br /> та покупці уживаного авто
+          Допомога у підборі <br /> та купівлі вживаного авто
         </Heading>
 
         <Text
@@ -42,12 +53,10 @@ const MainScreen = () => {
             автомобілів з пробігом мають <br /> приховані дефекти або завищену
             ціну?
           </Text>
-          <Text mb={8}>Підбір за 3-7 днів</Text>
-          <Text mb={8}>
-            Досягнемо знижки у продавця до 15% від вартості автомобіля
-          </Text>
+          <Text mb={8}>Підбір у найкоротші терміни</Text>
+          <Text mb={8}>Досягнемо знижки у продавця</Text>
           <Text mb={70}>
-            Технічна перевірка 112 параметрів; Професійний підбір автомобілів{' '}
+            Технічна перевірка 105 параметрів; Професійний підбір автомобілів{" "}
             <br />з юридичною та технічною гарантією.
           </Text>
         </Text>
@@ -67,27 +76,10 @@ const MainScreen = () => {
         >
           Замовити підбір
         </Button>
-        <Modal
-        initialFocusRef={initialRef}
-        finalFocusRef={finalRef}
-        isOpen={isOpen}
-        onClose={onClose}
-      >
-        <ModalOverlay />
-        <ModalContent zIndex={9999} bg="white">
-          <ModalHeader>Замовити підбір</ModalHeader>
-          <ModalCloseButton />
-          <ModalsBody initialRef={initialRef} />
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} >
-              Замовити
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+        <CallRequestModal isOpen={isOpen} onClose={onClose} />
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default MainScreen
+export default MainScreen;

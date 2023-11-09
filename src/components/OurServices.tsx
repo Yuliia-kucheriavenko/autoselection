@@ -35,7 +35,7 @@ export const OurServices = () => {
               pos="relative"
               borderTopRadius={15}
             >
-              <Image src={img} alt="service1" />
+              <Image src={img} alt="service1" borderTopLeftRadius={15} borderTopRightRadius={15}/>
               <Stack gap={10} mt={6} px={5} >
                 <Heading
                   textAlign="center"

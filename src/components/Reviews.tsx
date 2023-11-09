@@ -51,7 +51,8 @@ export const Reviews: React.FC<Props> = ({ REVIEWS, buttonLeft, buttonRight }) =
                 <Image
                 key={img}
                 src={img}
-                borderRadius={25}
+                w="270px"
+                h="440px"
                 display={
                   index >= currentIndex && index < currentIndex + 1
                     ? 'block'
@@ -71,7 +72,8 @@ export const Reviews: React.FC<Props> = ({ REVIEWS, buttonLeft, buttonRight }) =
                 <Image
                 key={img}
                 src={img}
-                borderRadius={25}
+                w="286px"
+                h="430px"
                 display={
                   index >= currentIndex && index < currentIndex + 3
                     ? 'block'
@@ -91,7 +93,8 @@ export const Reviews: React.FC<Props> = ({ REVIEWS, buttonLeft, buttonRight }) =
                 <Image
                 key={img}
                 src={img}
-                borderRadius={25}
+                w="286px"
+                h="430px"
                 display={
                   index >= currentIndex && index < currentIndex + 4
                     ? 'block'

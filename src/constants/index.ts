@@ -27,22 +27,22 @@ export const NAV_LINKS = [
 
 export const ATTAINMENT = [
   {
-    number: '2 035',
+    number: '5 035',
     title: 'машин ми перевірили'
   },
 
   {
-    number: '5',
+    number: '7',
     title: 'років успішної роботи'
   },
 
   {
-    number: '104',
+    number: '105',
     title: 'параметри перевірки'
   },
 
   {
-    number: '427',
+    number: '900',
     title: 'автомобілів допомогли купити'
   },
 ]

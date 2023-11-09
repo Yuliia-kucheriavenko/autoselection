@@ -12,7 +12,7 @@ export const ProblemsInSalons = () => {
           maxW={803}
           textAlign={{ base: "center", lg: "start", }}
         >
-          Що роблять в салонах для перепродажу автомобілів
+          Що роблять з автомобілями <br /> для перепродажу
         </Heading>
         <Grid
           templateColumns={{base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)'}}

@@ -1,6 +1,7 @@
-import service_1 from '../assets/OurServices/servise1.png';
-import service_2 from '../assets/OurServices/servise2.png';
+import service_1 from '../assets/OurServices/service1.jpg';
+import service_2 from '../assets/OurServices/service2.jpg';
 import service_3 from '../assets/OurServices/service3.jpg';
+import service_4 from '../assets/OurServices/service4.jpg';
 import serviceIcon_1 from '../assets/OurServices/icon1.jpg';
 import serviceIcon_2 from '../assets/OurServices/icon2.jpg';
 import serviceIcon_3 from '../assets/OurServices/icon_3.jpg';
@@ -17,7 +18,7 @@ export const SERVICES = [
   {
     img: service_2,
     title: 'Спеціаліст на день',
-    body: 'Ви підбираєте 5-7 варіантів, які вам подобаються, і берете з собою спеціаліста на цілий робочий день',
+    body: 'Ви підбираєте 3-4 варіанти, які вам подобаються, і берете з собою спеціаліста на цілий робочий день',
   },
 
   {
@@ -27,7 +28,7 @@ export const SERVICES = [
   },
 
   {
-    img: service_2,
+    img: service_4,
     title: 'Оцінка перед продажем',
     body: 'Оцінка стану автомобіля',
   },

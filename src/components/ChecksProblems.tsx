@@ -205,7 +205,7 @@ export const ChecksProblems = () => {
             mb={8}
             textAlign={{ base: "center", lg: "start",}}
           >
-            Які проблемо ми зустрічаємо
+            Які проблеми ми зустрічаємо
           </Heading>
           <Grid
             templateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)',}}

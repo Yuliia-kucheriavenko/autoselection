@@ -5,6 +5,11 @@ import breakpoints from './breakpoints'
 import fonts from './fonts'
 
 const theme = extendTheme({
+  global: {
+    body: {
+      bg: 'white'
+    }
+  },
   sizes,
   colors,
   breakpoints,

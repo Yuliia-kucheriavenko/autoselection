@@ -1,7 +1,7 @@
 import { Box,Flex, Button, Container, Text, Link} from '@chakra-ui/react'
 import background from '../assets/bg_advertising.jpg'
 export const Advertising = () => {
-  const telegramLink = "https://t.me/your-telegram-username";
+  const telegramLink = "https://t.me/Artem_autopodborr";
 
   return (
     <Box

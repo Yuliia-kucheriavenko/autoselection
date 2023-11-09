@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Box, Container, Flex, Image, Link, Text, } from '@chakra-ui/react';
 import Logo from '../components/Logo.tsx';
 import { NavBar } from '../App/AppHeader/NavBar.tsx';
@@ -13,18 +13,17 @@ import instagramHover from '../assets/instagramHover.svg';
 
 export const Footer = () => {
   const phoneNumber = "+38 063 454 55 99";
+  const telegramLink = "https://t.me/Artem_autopodborr";
 
   const callPhoneNumber = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
 
-  const telegramLink = "https://t.me/your-telegram-username";
-
+  
   const [telegramHovered, setTelegramHovered] = useState(false);
   const [viberHovered, setViberHovered] = useState(false);
   const [whatsappHovered, setWhatsappHovered] = useState(false);
   const [instagramHovered, setInstagramHovered] = useState(false);
-
 
 
   return (
@@ -64,7 +63,7 @@ export const Footer = () => {
               />
             </Link>
             <Link 
-              href="/" 
+              href={`tel:${phoneNumber}`}
               target="_blank"
               onMouseEnter={() => setViberHovered(true)}
               onMouseLeave={() => setViberHovered(false)}
@@ -76,7 +75,7 @@ export const Footer = () => {
               />
             </Link>
             <Link 
-              href="/" 
+              href={`tel:${phoneNumber}`}
               target="_blank"
               onMouseEnter={() => setWhatsappHovered(true)}
               onMouseLeave={() => setWhatsappHovered(false)}
