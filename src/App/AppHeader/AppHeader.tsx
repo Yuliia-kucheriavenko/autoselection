@@ -20,7 +20,7 @@ import {
 import Logo from "../../components/Logo";
 import { NavBar } from "./NavBar";
 import { ModalsBody } from "../../components/ModalBody";
-import CallRequestModal from "../../components/CallRequestModal";
+// import CallRequestModal from "../../components/CallRequestModal";
 
 export const AppHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -86,13 +86,13 @@ export const AppHeader = () => {
             fontSize={12}
             fontWeight={500}
             textTransform="uppercase"
-            onClick={onOpen}
+            // onClick={onOpen}
             _hover={{ bgColor: "#FFD100", fontWeight: "600" }}
           >
             Замовити дзвінок
           </Button>
 
-          <CallRequestModal isOpen={isOpen} onClose={onClose} />
+          {/* <CallRequestModal isOpen={isOpen} onClose={onClose} /> */}
         </Flex>
       </Container>
     </Box>

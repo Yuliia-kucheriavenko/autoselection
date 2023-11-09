@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import mainImage from "../assets/mainImage.png";
 import { ModalsBody } from "../components/ModalBody";
-import CallRequestModal from "./CallRequestModal";
+// import CallRequestModal from "./CallRequestModal";
 
 const MainScreen = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -71,12 +71,12 @@ const MainScreen = () => {
           py={6}
           zIndex={0}
           pos="relative"
-          onClick={onOpen}
+          // onClick={onOpen}
           _hover={{ bgColor: "#48B8CE", fontWeight: "600", color: "white" }}
         >
           Замовити підбір
         </Button>
-        <CallRequestModal isOpen={isOpen} onClose={onClose} />
+        {/* <CallRequestModal isOpen={isOpen} onClose={onClose} /> */}
       </Container>
     </Box>
   );
